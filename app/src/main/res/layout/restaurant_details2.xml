@@ -83,7 +83,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_addfooditem"
         android:layout_width="105dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_below="@id/tv_fooddescription"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="17dp"

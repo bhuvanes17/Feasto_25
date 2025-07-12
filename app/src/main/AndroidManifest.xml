@@ -23,9 +23,6 @@
             android:name=".Login.OTPverification"
             android:exported="false" />
         <activity
-            android:name=".Login.OTP_verification"
-            android:exported="false" />
-        <activity
             android:name=".Searchbox_filter.Searchfilter"
             android:exported="false" />
         <activity
