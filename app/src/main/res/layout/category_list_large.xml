@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="8dp"
+    android:orientation="vertical"
+    >
+
+        <ImageView
+            android:id="@+id/imgFood"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/pizza" />
+
+        <TextView
+            android:id="@+id/tvFoodName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"/>
+
+    <View
+        android:id="@+id/viewIndicator"
+        android:layout_width="65dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/indicator"
+        android:elevation="2dp"
+        android:visibility="gone" />
+
+</LinearLayout>

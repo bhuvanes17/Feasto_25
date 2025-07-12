@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/yellow"
+        android:theme="@style/CardView.Light">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/ll_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:padding="1dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/location_2" />
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Home \n"
+                        android:textColor="#02060B"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="18sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                         />
+
+                    <ImageView
+                        android:id="@+id/im_address"
+                        android:layout_width="26dp"
+                        android:layout_height="27dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="11dp"
+                        android:clickable="true"
+                        android:src="@drawable/down_arrow" />
+
+                    <TextView
+                        android:id="@+id/tv_profile2"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="230dp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:text="B"
+                        android:background="@drawable/profile_outline"
+                        android:textColor="#131A42"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_location_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home Address"
+                        android:textColor="#4E4949"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="10sp"
+                        android:layout_below="@id/ll_home"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="30dp"
+                        />
+                </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_editext"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="114dp"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="390dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="12dp"
+                    android:elevation="8dp"
+                    android:hint="Restaurants name or a dish..."
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColorHint="#424141"
+                    android:textSize="14sp"
+                    android:background="@drawable/editext"
+                    android:textColor="#A29E9E"
+                    android:drawablePadding="20dp"
+                    android:drawableStart="@drawable/search_icon2"
+                    android:drawableEnd="@drawable/mic_icon3"
+                    android:paddingEnd="10dp"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    android:longClickable="false"
+                    android:clickable="true"
+                    />
+            </LinearLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_foodcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/fragment_progressBar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleLarge" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_filterlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_explorelist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/robotomono_light"
+                    android:text="Explore More"
+                    android:textAllCaps="true"
+                    android:textColor="#504F4F"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_explorelist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/robotomono_light"
+                    android:text="List of Restaurant Deliviering to you"
+                    android:textAllCaps="true"
+                    android:textColor="#504F4F"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRestaurants"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

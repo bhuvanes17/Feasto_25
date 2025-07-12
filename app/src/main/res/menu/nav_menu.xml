@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/collection"
+            android:icon="@drawable/collection"
+            android:title="Your collections"
+            />
+        <item android:id="@+id/nav_order"
+            android:icon="@drawable/my_orders"
+            android:title="Your orders"/>
+
+        <item android:id="@+id/nav_recommen"
+            android:icon="@drawable/recommendation"
+            android:title="Manage recommentdations"/>
+
+        <item android:id="@+id/nav_address"
+            android:icon="@drawable/address_book"
+            android:title="Address book"
+            />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_coupon"
+            android:icon="@drawable/giftcards2"
+            android:title="Gift cards/coupon"/>
+
+        <item android:id="@+id/nav_help"
+            android:icon="@drawable/help_center"
+            android:title="Help center"/>
+
+        <item android:id="@+id/nav_about"
+            android:icon="@drawable/about"
+            android:title="About"/>
+
+    </group>
+<item android:title="">
+
+<menu >
+    <item android:id="@+id/nav_logout"
+        android:icon="@drawable/logout"
+        android:title="Logout"/>
+</menu>
+
+</item>
+</menu>

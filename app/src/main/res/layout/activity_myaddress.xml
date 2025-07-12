@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Location_details.Myaddress">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_delivery_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow_back"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select delivery location"
+            android:textColor="@color/blue_font"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="900dp"
+        android:layout_below="@id/ll_delivery_location">
+
+        <fragment
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/bottomSheetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="313dp"
+        android:background="@drawable/linear_layout"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Details"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#6F6E6E"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:hint="Flat no., landmark, etc."
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="12sp"
+                    android:padding="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/editext"
+                    android:drawableStart="@drawable/gps3"
+                    android:drawablePadding="5dp"/>
+
+                <EditText
+                    android:id="@+id/et_addtional_Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Addtional information optional"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="12sp"
+                    android:padding="12dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/editext"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eg.Floor, House no"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#6F6E6E"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Receiver details for this address"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#6F6E6E"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp" />
+                <EditText
+                    android:id="@+id/et_receiver_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/editext"
+                    android:drawableStart="@drawable/person"
+                    android:hint="Name"
+                    android:textAlignment="center"
+                    />
+                <EditText
+                    android:id="@+id/et_receiver_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/editext"
+                    android:drawableStart="@drawable/phone"
+                    android:hint="Phone number"
+                    android:textAlignment="center"
+                    />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_gravity="bottom">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:text="Save Address"
+        android:layout_marginTop="17dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="18sp"
+        android:background="@drawable/update_btn"
+        android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

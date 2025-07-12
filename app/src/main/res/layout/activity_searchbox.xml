@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Searchbox_filter.Searchbox">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <EditText
+            android:id="@+id/etSearch2"
+            android:layout_width="390dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="12dp"
+            android:elevation="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:hint="Restaurants name or a dish..."
+            android:fontFamily="@font/poppins_medium"
+            android:textColorHint="#424141"
+            android:textSize="14sp"
+            android:background="@drawable/editext"
+            android:textColor="#A29E9E"
+            android:drawablePadding="20dp"
+            android:drawableStart="@drawable/outline_arrow_back_i"
+            android:paddingEnd="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:cursorVisible="true"
+            android:inputType="text" />
+        <TextView
+            android:id="@+id/tvNoResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No items found . . . . !"
+            android:fontFamily="@font/poppins_medium"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:textColor="#545050"
+            android:layout_below="@+id/etSearch2"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What's on your mind?"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="#646668"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/rl"/>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_dish"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv"
+   >
+
+</androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

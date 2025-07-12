@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="195dp"
+    android:layout_marginTop="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<ImageView
+    android:id="@+id/img_vegicon"
+    android:layout_width="20dp"
+    android:layout_height="18dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:background="@drawable/veg_icon"/>
+
+    <TextView
+        android:id="@+id/tv_foodname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chicken Fry Briyani"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/blue_font"
+        android:layout_below="@id/img_vegicon"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/tv_foodprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹150"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/blue_font"
+        android:layout_below="@id/tv_foodname"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/tv_fooddescription"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:text="Chicken fry briyani served with dalcha and raita."
+        android:textSize="11sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="#515356"
+        android:layout_below="@id/tv_foodprice"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/img_foodphoto"
+        android:layout_width="120dp"
+        android:layout_height="135dp"
+        android:src="@drawable/briyani2"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/img_vegicon"
+        android:layout_marginEnd="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/img_bookmark"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/bookmark_2"
+        android:layout_below="@id/tv_fooddescription"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        />
+    <ImageView
+        android:id="@+id/img_share"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/share2"
+        android:layout_below="@id/tv_fooddescription"
+        android:layout_toRightOf="@id/img_bookmark"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_addfooditem"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/tv_fooddescription"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="-10dp"
+        android:elevation="4dp"
+        android:text="ADD"
+        android:textColor="#E72416"
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/add_btn_shape"
+        android:textSize="14sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/ll_quantity"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_below="@id/tv_fooddescription"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="-10dp"
+        android:elevation="4dp"
+        android:text="ADD"
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/add_btn_shape2"
+        android:textSize="12sp">
+
+        <ImageView
+            android:id="@+id/btn_minus"
+            android:layout_width="17dp"
+            android:layout_height="27dp"
+            android:src="@drawable/minus"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Minus" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+           />
+
+
+        <ImageView
+            android:id="@+id/btn_plus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/add_icon"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="7dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="Minus" />
+
+
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/divider_lin"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/line"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        />
+
+</RelativeLayout>

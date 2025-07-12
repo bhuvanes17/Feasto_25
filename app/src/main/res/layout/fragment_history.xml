@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Home_fragment.HistoryFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/yellow"
+        android:theme="@style/CardView.Light">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:popupTheme="@style/Theme.AppCompat.Light"
+                app:layout_collapseMode="pin"/>
+
+            <LinearLayout
+                android:id="@+id/llHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                app:layout_collapseMode="parallax">
+
+                <!-- Location Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/location_2" />
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home"
+                        android:textColor="#02060B"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="18sp"
+                        android:paddingStart="5dp" />
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginStart="7dp"
+                        android:src="@drawable/down_arrow" />
+
+                    <TextView
+                        android:id="@+id/tv_nav_draw"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="240dp"
+                        android:gravity="center"
+                        android:text="B"
+                        android:background="@drawable/profile_outline"
+                        android:textColor="#131A42"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="390dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="12dp"
+            android:elevation="8dp"
+            android:hint="Restaurants name or a dish..."
+            android:fontFamily="@font/poppins_medium"
+            android:textColorHint="#424141"
+            android:textSize="14sp"
+            android:background="@drawable/editext"
+            android:textColor="#A29E9E"
+            android:drawablePadding="20dp"
+            android:drawableStart="@drawable/search_icon2"
+            android:drawableEnd="@drawable/mic_icon3"
+            android:paddingEnd="10dp"
+            />
+        <ImageView
+            android:layout_width="270dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/no_food_order">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No food delivery orders yet"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    android:layout_marginStart="20dp"
+    android:text="Feasto"
+    android:textSize="37sp"
+    android:textColor="@color/grey"
+    android:fontFamily="@font/poppins_medium"/>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
