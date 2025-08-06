@@ -18,4 +18,4 @@ This is a simple food ordering app built using **Kotlin**, **Firebase Firestore*
 - SharedPreferences
 
 ## 📸 Screenshots
-https://github.com/bhuvanes17/Feasto_25/blob/ebd9e2542caceabc9d0894dd51dd75c3175746ec/Login.jpeg
+![image alt](https://github.com/bhuvanes17/Feasto_25/blob/ebd9e2542caceabc9d0894dd51dd75c3175746ec/Login.jpeg)
